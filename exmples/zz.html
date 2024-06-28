@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="zz.css">
+</head>
+<body>
+    <!-- <button onclick="displayDate()">Show Me Money!!!</button>
+    <div id="demo"></div> -->
+    <form>
+        <div>
+            <label>fullname</label>
+            <input type="text" id="fullname" name="fullname" placeholder="Enter fullname">
+        </div>
+   
+    <div>
+       
+        <input type="radio" name="gender" value="Female">
+        <label>Female</label>
+        <label>Male</label>
+        <input type="radio" name="gender" value="Male">
+        <label>Unavailble</label>
+        <input type="radio" name="gender" value="Unavailble">
+    </div>
+    <div>
+        <label>Apple</label>
+        <input type="checkbox" name="fruit" value="Apple">
+        <label>Banana</label>
+        <input type="checkbox" name="fruit" value="Banana">
+        
+        <label>Orange</label>
+        <input type="checkbox" name="fruit" value="Orange">
+    </div>
+    <button type="submit">Submit</button>
+</form>
+<script>
+    document.forms[0].addEventListener("submit",submitForm);
+    function submitForm(event){
+        event.prevenDefault();
+        const fullname = document.getElementById("fullname").value;
+        const gender = document.getElementsByName("gender");
+            for (let i = 0; i < gender.length; i++) {
+                console.log(gender[i].checked, gender[i].value);
+            }
+    }
+
+
+
+
+
+
+
+// function displayDate() {
+//   document.getElementById("demo").innerHTML = Date();
+// }
+</script>
+</body>
+</html>
