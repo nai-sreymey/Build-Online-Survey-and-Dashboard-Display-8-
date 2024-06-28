@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="kk.css">
+</head>
+<body>
+    <div id="container" name=""></div>
+    <script>
+        const div1 = document.createElement("div");
+        const h1 = document.createElement("h1");
+        const div3 = document.createElement("div");
+        const div4 = document.createElement("div");
+        const div5 = document.createElement("div");
+        const img=document.createElement("img");
+        const imge = document.createElement("img");
+        
+        
+        div3.setAttribute("class","box-1");
+        div1.setAttribute("class","container");
+        h1.setAttribute("class","heading");
+        div4.setAttribute("class","box-2");
+        div5.setAttribute("class","box-3");
+        div4.append(img);
+        div5.append(imge);
+
+        div3.append(div4,div5);
+        div1.append(h1,div3);
+
+        h1.textContent = "Hello";
+        
+        img.setAttribute("src", "21c9bd81-d144-41a6-a4b8-3f729238e4d5.jpg")
+        imge.setAttribute("src","download.jpeg");
+        document.body.appendChild(div1);
+
+    </script>
+</body>
+</html>
